@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tanvi.quizapp.QuizActivity"
+    android:background="@color/abc_input_method_navigation_guard">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Select one of the 3 options and click on start quiz"
+        android:id="@+id/textView"
+        android:textColor="@color/abc_primary_text_material_dark"
+        android:layout_marginBottom="32dp"
+        android:layout_above="@+id/quizOption"
+        android:layout_centerHorizontal="true" />
+
+
+    <RadioGroup
+        android:id="@+id/quizOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:layout_above="@+id/btnStart"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/optionAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Addition"
+            android:checked="true"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:buttonTint="@color/colorPrimary"/>
+
+        <RadioButton
+            android:id="@+id/optionSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtraction"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:textStyle="bold"
+            android:checked="false"
+            android:buttonTint="@color/colorPrimary"/>
+
+        <RadioButton
+            android:id="@+id/optionMult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multiplication"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:textStyle="bold"
+            android:buttonTint="@color/colorPrimary"/>
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Quiz"
+
+        android:focusable="true"
+        android:enabled="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/quizOption"
+        android:layout_alignStart="@+id/quizOption" />
+
+    <Button
+        android:id="@+id/btnQuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit App"
+        android:layout_below="@+id/quizOption"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/mathmania"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_above="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+
+</RelativeLayout>
